@@ -1,0 +1,36 @@
+{
+"Comment": "Exemplo simples de workflow com AWS Step Functions",
+"StartAt": "ReceberSolicitacao",
+"States": {
+"ReceberSolicitacao": {
+"Type": "Pass",
+"Result": {
+"mensagem": "Solicitação recebida com sucesso"
+},
+"Next": "ValidarSolicitacao"
+},
+"ValidarSolicitacao": {
+"Type": "Choice",
+"Choices": [
+{
+"Variable": "$.aprovado",
+"BooleanEquals": true,
+"Next": "ProcessarSolicitacao"
+}
+],
+"Default": "RejeitarSolicitacao"
+},
+"ProcessarSolicitacao": {
+"Type": "Pass",
+"Result": {
+"status": "Processado"
+},
+"End": true
+},
+"RejeitarSolicitacao": {
+"Type": "Fail",
+"Error": "SolicitacaoRejeitada",
+"Cause": "A solicitação não foi aprovada."
+}
+}
+}
