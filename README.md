@@ -6,6 +6,14 @@ Este repositório foi criado como entrega do desafio da DIO sobre **AWS Step Fun
 
 O objetivo deste laboratório é consolidar os conhecimentos adquiridos durante as aulas, documentando conceitos, anotações e insights sobre a criação de workflows automatizados utilizando o AWS Step Functions.
 
+
+
+## Imagem do fluxo na AWS Step Functions
+
+A imagem abaixo representa uma simulação visual das etapas realizadas no AWS Step Functions durante a criação, configuração e execução de uma máquina de estado.
+
+![Tutorial AWS Step Functions](tutorial-step-functions.png)
+
 ## Objetivos de aprendizagem
 
 Durante este desafio, foram trabalhados os seguintes pontos:
